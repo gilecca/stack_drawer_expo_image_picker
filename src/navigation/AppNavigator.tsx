@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { TouchableOpacity, Text } from 'react-native';
 import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
-
+import Ionicons from '@react-native-vector-icons/ionicons';
 // Screens
 import HomeScreen from '../screens/HomeScreen';
 import GalleryScreen from '../screens/GalleryScreen';
@@ -82,7 +82,10 @@ export default function AppNavigator() {
           title: 'Início',
           drawerLabelStyle: {
             fontWeight: 'bold',
-          }
+          },
+          drawerIcon:({ color, size })=> (
+            <Ionicons name="add-circle-outline" size={size} color={color}/>
+          ),
         }}
       />
       <Drawer.Screen 
@@ -92,7 +95,10 @@ export default function AppNavigator() {
           title: 'Galeria',
           drawerLabelStyle: {
             fontWeight: 'bold',
-          }
+          },
+          drawerIcon:({ color, size })=> (
+            <Ionicons name="add-circle-outline" size={size} color={color}/>
+          ),
         }}
       />
       <Drawer.Screen 
@@ -102,7 +108,10 @@ export default function AppNavigator() {
           title: 'Câmera',
           drawerLabelStyle: {
             fontWeight: 'bold',
-          }
+          },
+          drawerIcon:({ color, size })=> (
+            <Ionicons name="add-circle-outline" size={size} color={color}/>
+          ),
         }}
       />
     </Drawer.Navigator>
